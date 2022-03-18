@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./css/styles.css">
+    <title>Pokedex</title>
+</head>
+<body>
+    <main class="container">
+        <div class="pokedex">
+            <div class="pokedex-left">
+                <div class="pokedex-header">
+                    <div class="big-light">
+                        <div class="light"></div>
+                    </div>
+                    <div class="small-light"></div>
+                    <div class="small-light"></div>
+                    <div class="small-light"></div>
+                </div>
+                <div class="pokedex-screen">
+                    <div class="screen-container">
+                        <div class="screen-display">
+                            <div class="pokemon-img" class="display-image">
+                                <img id="pokemonImg" src="./images/pixel-pokeball.png" alt="pokeball" />
+                            </div>
+                            <div class="pokemon-name" class="display-name">
+                                <h4 id="pokemonName">- -</h4>
+                            </div>
+                            <div class="pokemon-number" class="display-number">
+                                <h4 id="pokemonNumber">No. - -</h4>
+                            </div>
+                            <div class="loading-screen"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pokedex-bottom">
+                    <input id="pokemon" type="text" placeholder="Pokemón (e.g. Pikachu)"/>
+                </div>
+            </div>
+            <div class="pokedex-right">
+                <div class="pokedex-header-right"></div>
+                <div class="pokedex-panel"></div>
+                <div class="pokedex-panel-controls"></div>
+            </div>
+        </main>
+    </main>
+    <div class="pokeball">
+        <img src="images/pokeball.png" alt="pokeball">
+    </div>
+</body>
+<script src="./js/api.js"></script>
+</html>
