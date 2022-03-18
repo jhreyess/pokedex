@@ -5,7 +5,7 @@ document.getElementById('pokemon').addEventListener('keyup', (element) => {
 
     if(!isLoading && element.target.value){
         let img = document.getElementById('pokemonImg');
-        img.src = "../images/loading.gif";
+        img.src = "./images/loading.gif";
         isLoading = true;
     }
 
@@ -25,7 +25,7 @@ const pokesearch = async (pokemon) => {
         if(response.status == 404) {
             name.innerText = "Not found";
             number.innerText = "No. ???";
-            img.src = "../images/pixel-pokeball.png";
+            img.src = "./images/pixel-pokeball.png";
         }
 
     }else{ // SUCCESS
