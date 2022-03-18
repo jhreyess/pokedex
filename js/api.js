@@ -1,17 +1,23 @@
 var timer;
 var isLoading = false;
 
-document.getElementById('pokemon').addEventListener('keyup', (element) => {
+document.getElementById('pokemon').addEventListener('keyup', (event) => {
 
-    if(!isLoading && element.target.value){
-        let img = document.getElementById('pokemonImg');
-        img.src = "./images/loading.gif";
-        isLoading = true;
+    let { key, target } = event
+
+    if(key !== "Backspace" && key !== "Delete"){    
+
+        if(!isLoading){
+            let img = document.getElementById('pokemonImg');
+            img.src = "./images/loading.gif";
+            isLoading = true;
+        }
+
+        let pokemon = target.value.toLowerCase();
+        clearTimeout(timer);
+        if(pokemon) { timer = setTimeout(() => pokesearch(pokemon), 1000); }
+
     }
-
-    let pokemon = element.target.value.toLowerCase();
-    clearTimeout(timer);
-    if(pokemon) { timer = setTimeout(() => pokesearch(pokemon), 1000); }
 })
 
 const pokesearch = async (pokemon) => {
